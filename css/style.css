@@ -1,0 +1,983 @@
+@import url("../fonts/stylesheet.css");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "cera_proregular", sans-serif;
+}
+
+.product-details {
+  padding: 90px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.offer-input-button {
+  border: none;
+  background-color: #ffffff;
+  border-radius: 8px 0 0 8px;
+  padding: 18px 25px;
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+}
+.offer-input-button:not(:last-child) {
+  border-right: 1px solid #000000;
+}
+.offer-input-button:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.offer-input-button.active {
+  background-color: #80E527;
+}
+
+.buy-now-button {
+  width: 100%;
+  height: 62px;
+  background-color: #000000;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  color: #80E527;
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.big-h2 {
+  font-family: "cera_probold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.star-container {
+  max-width: 155px;
+  max-height: 31px;
+}
+
+#hr-top {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.87);
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.navbar .navbar-brand {
+  max-height: 44px;
+  max-width: 91.51px;
+}
+.navbar ul {
+  margin-bottom: 0;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar ul li .nav-shipping-code {
+  font-family: "cera_promedium";
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  padding: 7px 30px;
+  border: 1px dashed #747474;
+}
+.navbar ul li .nav-shipping-code .ship-code-green {
+  color: #80E527;
+}
+.navbar ul li .nav-shipping-code .ship-code-white {
+  color: #ffffff;
+}
+.navbar ul li .nav-shipping-code .ship-code-purple {
+  color: #D5A4FF;
+}
+
+.product-details {
+  padding-bottom: 34px;
+}
+.product-details .tab-product-gallery {
+  display: flex;
+}
+.product-details .image-tab-column {
+  display: flex;
+  flex-direction: column;
+}
+.product-details .image-tab-column .img-tab-cell {
+  width: 80px;
+  height: 105px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.product-details .tab-img-container {
+  width: 390px;
+  height: 470px;
+  margin-left: 1.6rem;
+}
+.product-details .product-detail-desc > .product-detail-heading {
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.product-details .product-detail-desc > .product-detail-price {
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 0;
+}
+.product-details .product-detail-desc > .product-detail-paragraph {
+  font-family: "cera_promedium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000000;
+  text-shadow: 0px 4px 21px #FFFFFF;
+  margin-bottom: 0;
+}
+.product-details .product-detail-desc > .how-to-use {
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000000;
+  text-shadow: 0px 4px 21px #FFFFFF;
+}
+.product-details .product-offers {
+  padding-left: 0;
+}
+.product-details .product-offers p {
+  margin-bottom: 0;
+}
+.product-details .product-offers li {
+  list-style: none;
+  padding: 33px 0;
+  border-bottom: 4px solid #D9D9D9;
+}
+.product-details .product-offers li:last-child {
+  border-bottom: 0;
+}
+.product-details .product-offers li .offer-description input[type=radio] {
+  display: none;
+}
+.product-details .product-offers li .offer-description label {
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+.product-details .product-offers li .offer-description label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 21px;
+  height: 21px;
+  border-radius: 11px;
+  border: 2px solid #000000;
+  background-color: transparent;
+}
+.product-details .product-offers li .offer-description input[type=radio]:checked + label:after {
+  border-radius: 11px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  transform: translate(0%, -107%);
+  content: " ";
+  display: block;
+  background: #000000;
+  border: 3px solid #80E527;
+}
+.product-details .product-offers li .offer-description p {
+  padding-left: 2rem;
+}
+.product-details .product-offers li .offer-description .para-1 {
+  font-family: "cera_promedium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+}
+.product-details .product-offers li .offer-description .para-2 {
+  font-family: "cera_proregular", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 149.7%;
+  text-transform: capitalize;
+  color: #000000;
+}
+.product-details .product-offers li .product-price .cancelled-price {
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  text-transform: uppercase;
+  color: #FF0000;
+}
+.product-details .product-offers li .product-price .actual-price {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 31px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #000000;
+}
+.product-details .product-offers li .product-price .actual-price span {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "cera_proregular", sans-serif;
+  margin-right: 5px;
+}
+.product-details .product-offers li .options {
+  margin: 0.5rem 0;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  max-width: 387px;
+}
+.product-details .product-offers li .options .button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.product-details .product-offers li .options input {
+  flex: 0 0 33.33%;
+}
+.product-details .product-offers li .options .one-time-prices {
+  flex: 0 0 66.66%;
+  padding: 0 0.5rem;
+}
+.product-details .product-offers li .options .one-time-prices .offer {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+}
+.product-details .product-offers li .options .one-time-prices .one-time-cancelled-price {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FF0000;
+  text-align: right;
+}
+.product-details .product-offers li .options .one-time-prices .one-time-actual-price {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 23px;
+  color: #000000;
+  text-align: right;
+}
+.product-details .product-offers li .options .one-time-prices .per-unit {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 9px;
+  line-height: 8px;
+  color: #000000;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.featured-in {
+  background-color: #000000;
+  margin-bottom: 11px;
+  text-align: center;
+}
+
+.total-package {
+  background-color: #EBEBEB;
+}
+.total-package .total-package-banner {
+  background-color: #0A0A0A;
+  padding-left: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.total-package .total-package-banner .total-package-text {
+  color: #ffffff;
+  width: 70%;
+  float: right;
+}
+.total-package .total-package-banner .total-package-text > h2 {
+  font-family: "cera_promedium", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 54px;
+}
+.total-package .total-package-banner .total-package-text > p {
+  font-family: "cera_proregularitalic", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 45px;
+  color: #80E527;
+}
+.total-package .total-package-items {
+  padding-top: 1.3rem;
+}
+.total-package .total-package-items:not(:last-child) {
+  padding-right: 0;
+}
+.total-package .total-package-items .package-img-container {
+  margin: 0 auto;
+  margin-bottom: 27px;
+  width: 350px;
+  height: 300px;
+}
+.total-package .total-package-items .package-img-container > img {
+  display: inherit;
+  margin: 0 auto;
+}
+.total-package .total-package-items .package-item-desc {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.total-package .total-package-items .package-item-desc > h3 {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 67px;
+}
+.total-package .total-package-items .package-item-desc > .description {
+  font-family: "cera_prolight", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: capitalize;
+  height: 100px;
+}
+.total-package .total-package-items .package-item-desc > .package-item-price {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.love-results {
+  text-align: center;
+  padding-top: 4%;
+}
+.love-results h2.love {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 35px;
+  text-align: center;
+}
+.love-results .video-container-outer {
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 1017px;
+  height: 506px;
+  background: #B9BEBE;
+}
+.love-results .video-container-outer .video-container {
+  width: 809px;
+  height: 452px;
+  margin: 0 auto;
+  border: 10px solid #ffffff;
+  transform: translateY(-45px);
+}
+.love-results .feedback {
+  width: 50%;
+  font-family: "cera_promedium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 31px;
+  line-height: 42px;
+  color: #000000;
+  text-align: center;
+  margin: 2rem auto 4rem;
+}
+
+.great-idea {
+  background: linear-gradient(0deg, #FAF9F9, #FAF9F9);
+  margin-bottom: 10px;
+}
+.great-idea .idea-text {
+  text-align: center;
+  padding: 6rem;
+  display: block;
+}
+.great-idea .idea-text .green-line {
+  height: 3px;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #80E527;
+  display: block;
+}
+.great-idea .idea-text .star-container {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 7px;
+}
+.great-idea .idea-text .great-idea-heading {
+  font-family: "cera_probold", sans-serif;
+  font-size: 31px;
+  line-height: 42px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+}
+.great-idea .idea-paragraph {
+  font-family: "cera_proregular", sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.good-behavior {
+  background: url("../images/Group 30-good-behavior-bg-image.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  width: 100%;
+  padding: 60px 0;
+}
+.good-behavior .behavior-big-heading {
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 98px;
+  line-height: 87px;
+  text-transform: uppercase;
+}
+.good-behavior .behavior-subheading {
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 58px;
+  text-transform: uppercase;
+}
+.good-behavior .behavior-paragraph {
+  font-family: "cera_promedium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  text-shadow: 0px 4px 21px #ffffff;
+}
+
+.protection {
+  background-color: #0A0A0A;
+}
+.protection .protection-text {
+  font-family: "cera_proregularitalic", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 41px;
+  line-height: 40px;
+  text-align: center;
+  color: #80E527;
+  padding: 35px 0;
+  margin-bottom: 0;
+}
+
+.style-guide {
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+.style-guide .style-guide-heading {
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 75px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.style-guide .style-guide-paragraph {
+  font-family: "cera_promedium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+}
+.style-guide .style-steps {
+  text-align: center;
+}
+.style-guide .style-steps .guide-step-number .step {
+  font-family: "cera_prolight", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 75px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.style-guide .style-steps .guide-step-number .green-line {
+  display: block;
+  width: 55px;
+  height: 5px;
+  background-color: #80E527;
+  margin: 0 auto;
+}
+.style-guide .style-steps .guide-step-number .number {
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 67px;
+  line-height: 75px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.style-guide .style-steps .guide-text {
+  font-family: "cera_prolight", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: capitalize;
+  height: 146px;
+  padding: 0 2rem;
+}
+.style-guide .pro-tip {
+  background: rgba(133, 68, 189, 0.1);
+  border: 1px dashed rgba(133, 68, 189, 0.5);
+  width: 60%;
+  margin: 0 auto;
+}
+.style-guide .pro-tip > p {
+  font-family: "cera_promedium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 19px 50px;
+  margin-bottom: 0;
+}
+
+.key-ingredients > .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+.key-ingredients .all3-standards {
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: #000000;
+}
+.key-ingredients .all3-standards .standard {
+  margin: 50px;
+  max-width: 135px;
+  max-height: 150px;
+}
+.key-ingredients .ingredient {
+  position: relative;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.key-ingredients .ingredient::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: url("../images/brdr-leaf-img.png") no-repeat center;
+  top: 0;
+  background-size: contain;
+  display: inline-block;
+}
+.key-ingredients .ingredient .ingredient-left {
+  flex: 0 0 50%;
+  background-color: #B9BEBE;
+  padding-top: 5rem;
+}
+.key-ingredients .ingredient .ingredient-left .ingredient-left-inner {
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.key-ingredients .ingredient .ingredient-left .ingredient-left-inner > a {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #000000;
+  text-shadow: 0px 4px 21px #ffffff;
+}
+.key-ingredients .ingredient .ingredient-left .ingredient-left-inner > h2 {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 54px;
+  color: #000000;
+}
+.key-ingredients .ingredient .ingredient-left .ingredient-left-inner > p {
+  font-family: "cera_prolight", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 45px;
+  color: #000000;
+}
+.key-ingredients .ingredient .ingredient-right {
+  flex: 0 0 50%;
+  padding: 2rem 5rem;
+}
+.key-ingredients .ingredient .ingredient-right .ingredient-right-list li {
+  list-style: none;
+}
+.key-ingredients .ingredient .ingredient-right .ingredient-right-list li > h4 {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 45px;
+  padding-left: 2rem;
+  position: relative;
+}
+.key-ingredients .ingredient .ingredient-right .ingredient-right-list li > h4::before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+  top: 16px;
+  left: 0;
+}
+.key-ingredients .ingredient .ingredient-right .ingredient-right-list li > p {
+  font-family: "cera_prolight", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 36px;
+}
+
+.stock-up {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.stock-up .stock-up-and-save-heading {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.stock-up .stocks {
+  padding: 0 28px;
+  position: relative;
+}
+.stock-up .stocks:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 1px;
+  background-color: #80E527;
+  top: 30%;
+  right: 0;
+}
+.stock-up .stocks .stock-head p {
+  margin-bottom: 0;
+}
+.stock-up .stocks .stock-head .offer-div {
+  font-family: "cera_problack", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 29px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #000000;
+}
+.stock-up .stocks .stock-head .offer-div > .off {
+  color: #80E527;
+}
+.stock-up .stocks .stock-head .price-div {
+  font-family: "cera_proregular", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 16px;
+}
+.stock-up .stocks .stock-head .price-div .price {
+  font-family: "cera_problack", sans-serif;
+  color: #FF0000;
+  font-size: 16px;
+  line-height: 20px;
+}
+.stock-up .stocks .stock-head .price-div .you-save span {
+  font-size: 25px;
+  line-height: 31px;
+  font-family: "cera_probold", sans-serif;
+}
+.stock-up .stocks .stock-up-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  border: none;
+  background-color: #ffffff;
+  color: #80E527;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-shadow: 0px 4px 21px #FFFFFF;
+  font-size: 20px;
+  line-height: 22px;
+  font-family: "cera_problack", sans-serif;
+}
+
+.read-more .read-more-heading {
+  text-align: center;
+  padding: 5rem 0;
+  background: linear-gradient(0deg, #FAF9F9, #FAF9F9);
+}
+.read-more .read-more-heading > h2 {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 45px;
+  color: #000000;
+}
+.read-more .read-more-heading > p {
+  font-family: "cera_prolight", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 25px;
+  color: #000000;
+}
+.read-more .read-more-comments {
+  padding: 2rem 15rem 3rem;
+}
+.read-more .read-more-comments .comment-headline {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 45px;
+  color: #000000;
+  margin: 13px 0;
+}
+.read-more .read-more-comments .comment > p {
+  font-family: "cera_prolight", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 36px;
+  color: #000000;
+  margin-bottom: 0;
+}
+.read-more .read-more-comments .author {
+  font-family: "cera_problackitalic", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 45px;
+  color: #000000;
+}
+
+.pagination {
+  width: 55%;
+  margin: 0 auto;
+  margin-bottom: 88px;
+}
+.pagination .pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #B9BEBE;
+}
+.pagination .pagination-container .page {
+  flex: 0 0 50%;
+}
+.pagination .pagination-container .page p {
+  text-align: center;
+  margin-bottom: 0;
+  font-family: "cera-prolight", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 36px;
+  color: #000000;
+}
+.pagination .pagination-container .pagination-div {
+  flex: 0 0 50%;
+}
+.pagination .pagination-container .pagination-div > a {
+  background-color: #D9D9D9;
+  padding: 8px 20px;
+  display: inline-block;
+  float: left;
+  border: 1px solid #D9D9D9;
+  font-family: "cera_promedium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 36px;
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.pagination .pagination-container .pagination-div > a.active, .pagination .pagination-container .pagination-div a:hover:not(.active) {
+  background-color: #ffffff;
+  border: 1px solid #80E527;
+  color: #80E527;
+}
+
+.follow-on-ig {
+  background: #FBFBFB;
+}
+.follow-on-ig .follow-on-heading {
+  text-align: center;
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.follow-on-ig .follow-on-heading > span {
+  color: #80E527;
+}
+.follow-on-ig .ig-image-list {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.follow-on-ig .ig-image-list li {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+footer {
+  background-color: #EBEBEB;
+  text-align: center;
+}
+footer > .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+footer .footer-top {
+  padding: 48px 0 30px;
+  border-bottom: 1px solid #B9BEBE;
+}
+footer .footer-top .footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-top: 42px;
+}
+footer .footer-top .footer-list li {
+  list-style: none;
+  padding-right: 37px;
+}
+footer .footer-top .footer-list li:last-child {
+  padding-right: 0;
+}
+footer .footer-top .footer-list li > a {
+  font-family: "cera_promedium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+footer .footer-bottom {
+  padding: 30px 0 48px;
+}
+footer .footer-bottom .brand-partners {
+  margin-bottom: 30px;
+}
+footer .footer-bottom .brand-partners .luxury-img {
+  display: inline-block;
+  width: 14px;
+  height: 39px;
+  margin-right: 12px;
+}
+footer .footer-bottom .brand-partners .brand-text {
+  font-family: "cera_probold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+footer .footer-bottom .copyright-text {
+  font-family: "cera_prolight", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,1064 @@
+// importing the @font-face from ../fonts/stylesheet.css
+@import url("../fonts/stylesheet.css");
+
+$black: #000000;
+$dark-bg: rgba(0, 0, 0, 0.87);
+$green: #80E527;
+$white: #ffffff;
+$purple:#D5A4FF;
+$grey: #747474;
+$light-grey:#EBEBEB;
+$mid-grey: #B9BEBE;
+$red: #FF0000;
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'cera_proregular', sans-serif;
+}
+
+%section-padding{
+    padding: 90px;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.offer-input-button{
+    border: none;
+    background-color: $white;
+    border-radius: 8px 0 0 8px;
+    padding: 18px 25px;
+    font-family: 'cera_probold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    &:not(:last-child){
+        border-right: 1px solid $black;
+       
+    }
+    &:last-child{
+        border-radius: 0 8px 8px 0;
+    }
+}
+.offer-input-button.active{
+    background-color: $green;
+}
+
+.buy-now-button{
+    width: 100%;
+    height: 62px;
+    background-color: $black;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: $green;
+    font-family: 'cera_problack', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.big-h2{
+    font-family: 'cera_probold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.star-container{
+    max-width: 155px;
+    max-height: 31px;
+    
+}
+
+#hr-top{
+    width: 100%;
+    height: 10px;
+    background-color: black;
+}
+
+.navbar{
+    background-color: $dark-bg;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    .navbar-brand{
+        max-height: 44px;
+        max-width: 91.51px;
+    }
+    ul {
+        margin-bottom: 0;
+        li{
+            list-style: none;
+            .nav-shipping-code{
+                font-family: 'cera_promedium';
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.1em;
+                padding: 7px 30px;
+                border: 1px dashed $grey;
+                .ship-code-green{
+                    color: $green;
+                }
+                .ship-code-white{
+                    color: $white;
+                }
+                .ship-code-purple{
+                    color: $purple;
+                }
+            }
+        }
+    }
+}
+
+// product details section 
+
+.product-details{
+    @extend %section-padding;
+    padding-bottom: 34px;
+
+    .tab-product-gallery{
+        display: flex;
+    }
+    .image-tab-column{
+        display: flex;
+        flex-direction: column;
+        .img-tab-cell{
+            width: 80px;
+            height: 105px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+    }
+    .tab-img-container{
+        width: 390px;
+        height: 470px;
+        margin-left: 1.6rem;
+    }
+
+    .product-detail-desc{
+        >.product-detail-heading{
+            font-family: 'cera_problack', sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 28px;
+            text-transform: uppercase;
+            color: $black;
+        }
+        >.product-detail-price{
+            font-family: 'cera_problack', sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 35px;
+            line-height: 44px;
+            text-transform: uppercase;
+            color: $black;
+            margin-bottom: 0;
+        }
+        >.product-detail-paragraph{
+            font-family: 'cera_promedium', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 22px;
+            color: $black;
+            text-shadow: 0px 4px 21px #FFFFFF;
+            margin-bottom: 0;
+
+        }
+        >.how-to-use{
+            font-family: 'cera_problack', sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 15px;
+            line-height: 22px;
+            color: $black;
+            text-shadow: 0px 4px 21px #FFFFFF;
+
+        }
+    }
+    .product-offers{
+        padding-left: 0;
+        // margin-top: 33px;
+        p{
+            margin-bottom: 0;
+        }
+        li{
+            list-style: none;
+            padding: 33px 0;
+            border-bottom: 4px solid #D9D9D9;
+            &:last-child{
+                border-bottom: 0;
+            }
+            .offer-description{
+                input[type='radio'] {
+                    display: none;
+                  }
+                  label{
+                    font-family: 'cera_problack', sans-serif;
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 22px;
+                    line-height: 33px;
+                    text-transform: uppercase;
+                  }
+                  label:before {
+                    content: " ";
+                    display: inline-block;
+                    position: relative;
+                    top: 5px;
+                    margin: 0 5px 0 0;
+                    width: 21px;
+                    height: 21px;
+                    border-radius: 11px;
+                    border: 2px solid $black;
+                    background-color: transparent;
+                  }
+
+                  input[type='radio']:checked + label:after {
+                    border-radius: 11px;
+                    width: 21px;
+                    height: 21px;
+                    position: absolute;
+                    transform: translate(0%, -107%);
+                    content: " ";
+                    display: block;
+                    background: $black;
+                    border: 3px solid $green;
+                  }
+
+                  p{
+                    padding-left: 2rem;                    
+                  }
+                  .para-1{
+                    font-family: 'cera_promedium', sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 23px;
+                    // text-transform: uppercase;
+                  }
+                  .para-2{
+                    font-family: 'cera_proregular', sans-serif;
+                    // font-family: 'Cera Pro';
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 149.7%;
+                    text-transform: capitalize;
+                    color: $black;
+                  }
+                  
+            }
+            .product-price{
+                .cancelled-price{
+                    font-family: 'cera_problack', sans-serif;
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-align: right;
+                    text-decoration-line: line-through;
+                    text-transform: uppercase;
+                    color: $red;
+                }
+                .actual-price{
+                    font-family: 'cera_probold', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 25px;
+                    line-height: 31px;
+                    text-align: right;
+                    // text-decoration-line: line-through;
+                    text-transform: uppercase;
+                    color: $black;
+                    span{
+                        font-size: 16px;
+                    line-height: 20px;
+                    font-family: 'cera_proregular', sans-serif;
+                    margin-right: 5px;
+                    }
+                }
+            }
+            .options{
+                margin: .5rem 0;
+                border: 1px solid $black;
+                border-radius: 8px;
+                max-width: 387px;
+                // max-height: 55px;
+                .button-container{
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    // margin-left: -2px;
+                }
+                input{
+                    flex: 0 0 33.33%;
+                }
+                .one-time-prices{
+                    flex: 0 0 66.66%;
+                    padding:0 0.5rem ;
+                    .offer{
+                        font-family: 'cera_probold', sans-serif;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 23px;
+                    }
+                    .one-time-cancelled-price{
+                        font-family: 'cera_probold', sans-serif;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: $red;
+                        text-align: right;
+
+                    }
+                    .one-time-actual-price{
+                        font-family: 'cera_probold', sans-serif;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 23px;
+                        color: $black;
+                        text-align: right;
+                    }
+                    .per-unit{
+                        font-family: 'cera_probold', sans-serif;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 9px;
+                        line-height: 8px;
+                        color: $black;
+                        text-align: right;
+                        text-transform: uppercase;
+                    }
+                    
+                }
+               
+                
+            }
+        }
+    }
+}
+
+.featured-in{
+    background-color: $black;
+    margin-bottom: 11px;
+    text-align: center;
+}
+
+//total package
+
+.total-package{
+    background-color: $light-grey;
+
+    .total-package-banner{
+        background-color: #0A0A0A;
+        padding-left: 0 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        .total-package-text{
+            color: $white;
+            // text-align: right;
+            width: 70%;
+            float: right;
+            > h2{
+                font-family: 'cera_promedium', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 52px;
+                line-height: 54px;
+            }
+            >p{
+                font-family: 'cera_proregularitalic', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 45px;
+                color: $green;
+            }
+        }
+    }
+    .total-package-items{
+        padding-top: 1.3rem;
+         &:not(:last-child){
+            padding-right: 0;
+        }
+        .package-img-container{
+            margin: 0 auto;
+            // padding: 0 7px;
+            margin-bottom: 27px;
+            width: 350px;
+            height: 300px;
+            > img{
+                display: inherit;
+                margin: 0 auto;
+            }
+        }
+        .package-item-desc{
+            text-align: center;
+            margin: 0 auto;
+            // width: 90%;
+            padding: 0 2rem;
+            > h3{
+                font-family: 'cera_probold', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 30px;
+                text-align: center;
+                text-transform: uppercase;
+                height: 67px;
+            }
+            >.description{
+                font-family: 'cera_prolight', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 23px;
+                text-align: center;
+                text-transform: capitalize;
+                height: 100px;
+            }
+            >.package-item-price{
+                font-family: 'cera_probold', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 23px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.love-results{
+    text-align: center;
+    padding-top: 4%;
+
+    h2.love{
+        font-family: 'cera_probold', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 35px;
+        text-align: center;
+    }
+    .video-container-outer{
+        margin: 0 auto;
+        margin-top: 60px;
+        width: 1017px;
+        height: 506px;
+        background: $mid-grey;
+
+        .video-container{
+            width: 809px;
+            height: 452px;
+            margin: 0 auto;
+            border: 10px solid #ffffff;
+            transform: translateY(-45px);
+
+        }
+    }
+
+    .feedback{
+        width: 50%;
+        font-family: 'cera_promedium', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 31px;
+        line-height: 42px;
+        color: $black;
+        text-align: center;
+        margin: 2rem auto 4rem;
+    }
+}
+
+.great-idea{
+    background: linear-gradient(0deg, #FAF9F9, #FAF9F9);
+    margin-bottom: 10px;
+    .idea-text{
+        text-align: center;
+        padding: 6rem;
+        display: block;
+        .green-line{
+            height: 3px;
+            width: 50%;
+            margin: 0 auto;
+            background-color: $green;
+            display: block;
+        }
+        .star-container{
+            
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 7px;
+        }
+        .great-idea-heading{
+            font-family: 'cera_probold', sans-serif;
+            // font-style: normal;
+            // font-weight: 500;
+            font-size: 31px;
+            line-height: 42px;
+            color: $black;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+    .idea-paragraph{
+        font-family: 'cera_proregular', sans-serif;
+        // font-style: normal;
+        // font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
+
+
+.good-behavior{
+    // background: linear-gradient(267.55deg, #E5E2E5 41.63%, rgba(252, 252, 252, 0.474375) 52.66%, rgba(252, 252, 252, 0.13) 65.37%), url('../images/Group\ 30-good-behavior-bg-image.png');
+    // transform: matrix(1, 0, 0, -1, 0, 0);
+    background: url('../images/Group 30-good-behavior-bg-image.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    width: 100%;
+    padding: 60px 0;
+    // height: 680px;
+
+    .behavior-big-heading{
+        font-family: 'cera_problack', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 98px;
+        line-height: 87px;
+        // display: flex;
+        // align-items: center;
+        text-transform: uppercase;
+    }
+    .behavior-subheading{
+        font-family: 'cera_problack', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 58px;
+        // display: flex;
+        // align-items: center;
+        text-transform: uppercase;
+    }
+    .behavior-paragraph{
+        font-family: 'cera_promedium', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 40px;
+        text-shadow: 0px 4px 21px $white;
+    }
+
+}
+
+.protection{
+    background-color: #0A0A0A;
+    .protection-text{
+        font-family: 'cera_proregularitalic', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 41px;
+        line-height: 40px;
+        text-align: center;
+        color: $green;
+        padding: 35px 0;
+        margin-bottom: 0;
+    }
+}
+
+.style-guide{
+    padding-top: 70px;
+    padding-bottom: 120px;
+    .style-guide-heading{
+        font-family: 'cera_problack', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 75px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .style-guide-paragraph{
+        font-family: 'cera_promedium', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 38px;
+        text-align: center;
+    }
+    .style-steps{
+        text-align: center;
+        .guide-step-number{
+            .step{
+                font-family: 'cera_prolight', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 42px;
+                line-height: 75px;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+            .green-line{
+                display: block;
+                width: 55px;
+                height: 5px;
+                background-color: $green;
+                margin: 0 auto;
+            }
+            .number{
+                font-family: 'cera_problack', sans-serif;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 67px;
+                line-height: 75px;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+        }
+        .guide-text{
+            font-family: 'cera_prolight', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: center;
+            letter-spacing: 0.15em;
+            text-transform: capitalize;
+            height: 146px;
+            padding: 0 2rem;
+        }
+    }
+    .pro-tip{
+        background: rgba(133, 68, 189, 0.1);
+        border: 1px dashed rgba(133, 68, 189, 0.5);
+        width: 60%;
+        margin: 0 auto;
+        >p{
+            font-family: 'cera_promedium', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: center;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 19px 50px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.key-ingredients{
+    >.container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .all3-standards{
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        background-color: $black;
+
+        .standard{
+            margin: 50px;
+            max-width: 135px;           
+            max-height: 150px;           
+        }
+    }
+    .ingredient{
+        position: relative;
+        height: max-content;
+        &::before{
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            background: url('../images/brdr-leaf-img.png') no-repeat center;
+            top: 0;
+            background-size: contain;
+            display: inline-block;
+            // left: 50%;
+        }
+        .ingredient-left{
+            flex: 0 0 50%;
+            background-color: $mid-grey;
+            padding-top: 5rem;
+            .ingredient-left-inner{
+                margin: 0 auto;
+                // width: 90%;
+                width: max-content;
+                >a{
+                    font-family: 'cera_probold', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 22px;
+                    text-decoration-line: underline;
+                    color: $black;
+                    text-shadow: 0px 4px 21px $white;
+                }
+                >h2{
+                    font-family: 'cera_probold', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 52px;
+                    line-height: 54px;
+                    color: $black;
+                }
+                >p{
+                    font-family: 'cera_prolight', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 45px;
+                    color: $black;
+                }
+            }
+        }
+        .ingredient-right{
+            flex: 0 0 50%;
+            padding: 2rem 5rem;
+            .ingredient-right-list{
+                li{
+                    list-style: none;
+                    >h4{
+                        font-family: 'cera_probold', sans-serif;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 31px;
+                        line-height: 45px;
+                        padding-left: 2rem;
+                        position: relative;
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            height: 10px;
+                            width: 10px;
+                            background-color: $black;
+                            border-radius: 50%;
+                            top: 16px;
+                            left: 0;
+                        }
+                    }
+                    >p{
+                        font-family: 'cera_prolight', sans-serif;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 22px;
+                        line-height: 36px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.stock-up{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .stock-up-and-save-heading{
+        font-family: 'cera_probold', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .stocks{
+        padding: 0 28px;
+        position: relative;
+        &:not(:last-child){
+            &::after{
+                position: absolute;
+                content: '';
+                height: 50%;
+                width: 1px;
+                background-color: $green;
+                top: 30%;
+                right: 0;
+            }
+        }
+        .stock-head{
+            p{
+                margin-bottom: 0;
+            }
+            .offer-div{
+                font-family: 'cera_problack', sans-serif;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 29px;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: $black;
+                >.off{
+                    color: $green;
+                }
+            }
+            .price-div{
+                font-family: 'cera_proregular', sans-serif;
+                font-style: normal;
+                font-weight: 900;                
+                text-align: right;
+                text-transform: uppercase;
+                font-size: 13px;
+                    line-height: 16px;
+                .price{
+                    font-family: 'cera_problack', sans-serif;
+                    color: $red;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .you-save{
+                    // font-size: 13px;
+                    // line-height: 16px;                  
+                    span{
+                        font-size: 25px;
+                        line-height: 31px;
+                        font-family: 'cera_probold', sans-serif;
+                    }   
+                }
+            }
+        }
+        .stock-up-button{
+           display: block;
+           margin: 0 auto;
+           margin-top: 15px;
+           border: none;
+           background-color: $white;
+           color: $green;
+           text-decoration-line: underline;
+           text-shadow: 0px 4px 21px #FFFFFF;
+           font-size: 20px;
+           line-height: 22px;
+           font-family: 'cera_problack', sans-serif;
+        }
+    }
+}
+
+.read-more{
+    .read-more-heading{
+        text-align: center;
+        padding: 5rem 0;
+        background: linear-gradient(0deg, #FAF9F9, #FAF9F9);
+        >h2{
+            font-family: 'cera_probold', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 52px;
+            line-height: 45px;
+            color: $black;
+        }
+        >p{
+            font-family: 'cera_prolight', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 25px;
+            color: $black;
+        }
+    }
+    .read-more-comments{
+        padding: 2rem 15rem 3rem;
+        .comment-headline{
+            font-family: 'cera_probold', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 31px;
+            line-height: 45px;
+            color: $black;
+            margin: 13px 0;
+        }
+        .comment{
+            >p{
+                font-family: 'cera_prolight', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 22px;
+                line-height: 36px;
+                color: $black;
+                margin-bottom: 0;
+            }
+        }
+        .author{
+            font-family: 'cera_problackitalic', sans-serif;
+            font-style: italic;
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 45px;
+            color: $black;
+        }
+    }
+}
+
+.pagination{
+    width: 55%;
+    margin: 0 auto;
+    margin-bottom: 88px;
+    .pagination-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid $mid-grey;
+        .page{
+            flex: 0 0 50%;
+            p{
+                text-align: center;
+                margin-bottom: 0;
+                font-family: 'cera-prolight', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 22px;
+                line-height: 36px;
+                color: $black;
+            }
+        }
+        .pagination-div{
+            flex: 0 0 50%;
+            >a{
+                background-color: #D9D9D9;
+                padding: 8px 20px;
+                display: inline-block;
+                float: left;
+                border: 1px solid #D9D9D9;
+                font-family: 'cera_promedium', sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 36px;
+                color: $black;
+                text-decoration: none;
+                transition: 0.3s;
+
+            }
+            >a.active, a:hover:not(.active){
+                background-color: $white;
+                border: 1px solid $green;
+                color: $green;
+            }
+        }
+    }
+}
+
+.follow-on-ig{
+    background: #FBFBFB;
+    .follow-on-heading{
+        text-align: center;
+        font-family: 'cera_probold', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+        color: $black;
+        // height: 130px;
+        // width: 30%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        >span{
+            color: $green;
+        }
+    }
+
+    .ig-image-list{
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        margin-bottom: 0;
+        li{
+            list-style: none;
+            padding: 0.5rem;
+        }
+    }
+}
+
+footer{
+    >.container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    background-color: $light-grey;
+    text-align: center;
+    .footer-top{
+        padding: 48px 0 30px;
+        border-bottom: 1px solid $mid-grey;
+        .footer-list{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 0;
+            margin-top: 42px;
+            li{
+                list-style: none;
+                padding-right: 37px;
+                &:last-child{
+                    padding-right: 0;
+                }
+                >a{
+                    font-family: 'cera_promedium', sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $black;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        padding: 30px 0 48px;  
+        .brand-partners{
+            margin-bottom: 30px;
+            .luxury-img{
+                display: inline-block;
+                width: 14px;
+                height: 39px;
+                margin-right: 12px;
+            }
+            .brand-text{
+                font-family: 'cera_probold', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: $black;
+            }
+        }
+        .copyright-text{
+            font-family: 'cera_prolight', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 15px;
+            color: $black;
+        }
+    }
+}

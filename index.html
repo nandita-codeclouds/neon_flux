@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" rel="stylesheet">
+    <!-- fontawesome cdn  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Good Behavior Spirulina Protein Smoothing Spray</title>
+</head>
+<body>
+    <div id="hr-top"></div>
+    <!-- navbar  -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="img-fluid" src="./images/logo-icon.png" alt="">
+            </a>
+            <ul class="navbar-right d-flex">
+                <li class="nav-item">
+                    <div class="nav-shipping-code">
+                        <span class="ship-code-green">Free Shipping</span>
+                        <span class="ship-code-white">On All Orders $25+</span>
+                        <span class="ship-code-purple"> -  No Code Needed</span>
+                          
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- product details banner -->
+
+    <!-- to create dropdowns, use ul li and input type button or radio  -->
+
+    <section class="product-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 tab-product-gallery">
+                    <div class="image-tab-column">
+                        <div class="img-tab-cell">
+                            <img class="img-fluid" src="./images/Rectangle 30-spray-img-1.png" alt="" onclick="openTabImg(this)">
+                        </div>
+                        <div class="img-tab-cell">
+                            <img class="img-fluid" src="./images/Rectangle 31-spray-img-2.png" alt="" onclick="openTabImg(this)">
+                        </div>
+                        <div class="img-tab-cell">
+                            <img class="img-fluid" src="./images/Rectangle 32-spray-img-3.png" alt="" onclick="openTabImg(this)">
+                        </div>
+                        <div class="img-tab-cell">
+                            <img class="img-fluid" src="./images/Rectangle 33-spray-img-4.png" alt="" onclick="openTabImg(this)">
+                        </div>
+                        <div class="img-tab-cell">
+                            <img class="img-fluid" src="./images/Rectangle 34-spray-img-5.png" alt="" onclick="openTabImg(this)">
+                        </div>
+                        <div class="img-tab-cell">
+                            <img class="img-fluid" src="./images/Rectangle 35-spray-img-6.png" alt="" onclick="openTabImg(this)">
+                        </div>
+                    </div>
+                    <div class="tab-img-container">
+                        <img id="expandedImg" style="width:100%" src="./images/Rectangle 30-spray-img-1.png">
+                        <div id="imgtext"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-detail-desc">
+                        <h1 class="product-detail-heading">Good Behavior Spirulina Protein Smoothing Spray</h1>
+                        <p class="product-detail-price">$32</p>
+                        <p class="product-detail-paragraph">Trade in frizz for silky, smooth hair. It’s like a daily keratin treatment in a bottle.</p>
+                        <a class="how-to-use" href="">How to Use It ></a>
+                    </div>
+                    <ul class="product-offers">
+                        <li>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="offer-description">
+                                    <input type="radio" id="subscribe_and_save" name="offer" value="subscribe_and_save" onclick="checkOfferValue(this)">
+                                    <label for="subscribe_and_save" id="subscribe_and_save_label">Subscribe & Save 15% </label><br>
+                                    
+                                    <!-- <h2>Subscribe & Save 15% </h2> -->
+                                    <p class="para-1">Cancel Anytime.</p>
+                                    <p class="para-2">Frequency: Every Month</p>
+                                </div>
+                                <div class="product-price">
+                                    <p class="cancelled-price">$XX</p>
+                                    <p class="actual-price">$XX</p>
+                                </div>
+                            </div>
+    
+                            <div class="options show " id="subscribe_and_save_options">      
+                                <div class="button-container">
+                                    <input class="offer-input-button active " type="button" value="30 days" onclick="msg()">
+                                    <input class="offer-input-button" type="button" value="60 days" onclick="msg()">
+                                    <input class="offer-input-button " type="button" value="90 days" onclick="msg()">
+                                </div>                          
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="offer-description">
+                                    <input type="radio" id="one_time" name="offer" value="one_time" onclick="checkOfferValue(this)" >
+                                    <label for="one_time" id="one_time_label">One Time </label><br>
+                                    <!-- <h2>One Time </h2> -->
+                                    <p class="para-2">Purchase this time only.</p>
+                                </div>
+                                <div class="product-price">
+                                    <p class="cancelled-price">$XX</p>
+                                    <p class="actual-price"><span>You Save</span>$XX</p>
+                                </div>
+                            </div>                           
+    
+                            <div class="options-container hide" id="one_time_options">
+                                <div class="d-flex options">
+                                    <input class="offer-input-button active" type="button" value="4 pack" onclick="msg()">
+                                    <div class="one-time-prices d-flex align-items-center justify-content-between" >
+                                        <div class="offer">30% off</div>
+                                        <div class="">
+                                            <p class="one-time-cancelled-price">$128</p>
+                                            <p class="one-time-actual-price">$128</p>
+                                            <p class="per-unit">Per unit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex options">
+                                    <input class="offer-input-button" type="button" value="3 pack" onclick="msg()">
+                                    <div class="one-time-prices d-flex align-items-center justify-content-between">
+                                        <div class="offer">30% off</div>
+                                        <div class="">
+                                            <p class="one-time-cancelled-price">$128</p>
+                                            <p class="one-time-actual-price">$128</p>
+                                            <p class="per-unit">Per unit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex options">
+                                    <input class="offer-input-button" type="button" value="2 pack" onclick="msg()">
+                                    <div class="one-time-prices d-flex align-items-center justify-content-between">
+                                        <div class="offer">30% off</div>
+                                        <div class="">
+                                            <p class="one-time-cancelled-price">$128</p>
+                                            <p class="one-time-actual-price">$128</p>
+                                            <p class="per-unit">Per unit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex options">
+                                    <input class="offer-input-button" type="button" value="1 pack" onclick="msg()">
+                                    <div class="one-time-prices d-flex align-items-center justify-content-between">
+                                        <div class="offer">30% off</div>
+                                        <div class="">
+                                            <p class="one-time-cancelled-price">$128</p>
+                                            <p class="one-time-actual-price">$128</p>
+                                            <p class="per-unit">Per unit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                    
+                </div>               
+            </div>
+        </div>
+    </section>
+
+    <!-- featured in  -->
+    <section class="featured-in">
+        <div class="container-fluid">
+            <img class="img-fluid" src="./images/Rectangle 53-featured-in.png" alt="">
+        </div>
+    </section>
+
+    <!-- get the total package  -->
+    <section class="total-package">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 total-package-banner">
+                    <div class="total-package-text">
+                        <h2>Get The Total Package</h2>
+                        <p>Good Behavior</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 total-package-items">
+                    <div class="package-img-container">
+                        <img class="img-fluid" src="./images/Spray_prep 1-total-package-item-1.png" alt="">
+                    </div>
+                    <div class="package-item-desc">
+                        <h3>Smoothing Spray + 4-in-1 Prep Spray</h3>
+                        <p class="description">Gently detangle, fight frizz, and enhance shine for long-lasting results with this smoothing duo.</p>
+                        <p class="package-item-price">$XX</p>
+                        <button class="buy-now-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 total-package-items">
+                    <div class="package-img-container">
+                        <img class="img-fluid" src="./images/Cream_Spray 1-total-package-item-2.png" alt="">
+                    </div>
+                    <div class="package-item-desc">
+                        <h3>Smoothing Spray + Blowout Cream</h3>
+                        <p class="description">Combine frizz-fighting power 
+                            of spirulina and a lightweight moisturizing cream for soft, 
+                            shiny strands.
+                            </p>
+                        <p class="package-item-price">$XX</p>
+                        <button class="buy-now-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 total-package-items">
+                    <div class="package-img-container">
+                        <img class="img-fluid" src="./images/Trio 1-total-package-item-3.png" alt="">
+                    </div>
+                    <div class="package-item-desc">
+                        <h3>GOOD BEHAVIOR Trio</h3>
+                        <p class="description">Everything you need to create the smooth, sleek look you love from start to finish.</p>
+                        <p class="package-item-price">$XX</p>
+                        <button class="buy-now-button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- love the results  -->
+<section class="love-results">
+    <div class="container">
+        <h2 class="love">You’ll Love These Results</h2>
+        <div class="video-container-outer">
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1lVdwfIumw4_mDnmQ3imII8cXE8gCRakD/preview" width="100%" height="100%" allow="autoplay"></iframe>
+            </div>
+        </div>
+        <p class="feedback">100% of users agreed their hair looked like they got a keratin treatment at a salon.</p>
+    </div>
+</section>
+
+<!-- great idea  -->
+
+<section class="great-idea">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="idea-img">
+                <img class="img-fluid" src="./images/B&A_Smooth 1_1 1-great-idea-img-1.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-4 idea-text">
+            <div class="idea-text-heading">
+                <div class="star-container">
+                    <img class="img-fluid" src="./images/5-star-five-star-img.png" alt="">
+                </div>
+                <span class="green-line"></span>
+                <h5 class="great-idea-heading">Great Idea</h5>
+            </div>
+            <p class="idea-paragraph">
+                I love Good Behavior. It truly gives me stright, silky, smooth hair despite the stubborn waviness underneath. The travel size is perfect for trips! - Libby C.
+            </p>
+        </div>
+        <div class="col-lg-4">
+            <div class="idea-img">
+                <img class="img-fluid" src="./images/B&A_Smooth 2_2 1-great-idea-img-2.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- good behavior  -->
+<section class="good-behavior">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="behavior-big-heading">Good Behavior</h2>
+                <h3 class="behavior-subheading">Spirulina Protein Smoothing Spray</h3>
+                <p class="behavior-paragraph">
+                    Get salon-worthy, ultra-smooth hair in half the time with this frizz-fighting formula. Each spray shields hair from humidity, heat, and UV damage. 
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="protection">
+    <div class="container-fluid">
+        <p class="protection-text">450* Heat Protection - 24 Hour Frizz Control</p>
+    </div>
+</section>
+
+<!-- style guide  -->
+<section class="style-guide">
+    <div class="container">
+        <h2 class="style-guide-heading">Your Ultimate Style Guide</h2>
+        <p class="style-guide-paragraph">How to Use Good Behavior</p>
+        <div class="row">
+            <div class="col-lg-3 style-steps">
+                <div class="guide-step-number">
+                    <p class="step">Step</p>
+                    <span class="green-line"></span>
+                    <p class="number">1</p>
+                </div>
+                <p class="guide-text">
+                    Mist Good Behavior Spirulina Protein Smoothing Spray over damp or dry hair in sections and comb through.
+                </p>
+            </div>
+            <div class="col-lg-3 style-steps">
+                <div class="guide-step-number">
+                    <p class="step">Step</p>
+                    <span class="green-line"></span>
+                    <p class="number">2</p>
+                </div>
+                <p class="guide-text">
+                    Blow-dry hair in sections to seal in the treatment with heat.
+                </p>
+            </div>
+            <div class="col-lg-3 style-steps">
+                <div class="guide-step-number">
+                    <p class="step">Step</p>
+                    <span class="green-line"></span>
+                    <p class="number">3</p>
+                </div>
+                <p class="guide-text">
+                    Style as usual or apply again and finish with a flat iron for maximum smoothing and shine.
+                </p>
+            </div>
+            <div class="col-lg-3 style-steps">
+                <div class="guide-step-number">
+                    <p class="step">Step</p>
+                    <span class="green-line"></span>
+                    <p class="number">4</p>
+                </div>
+                <p class="guide-text">
+                    Slay the day with sleek, frizz-free hair!
+                </p>
+            </div>
+        </div>
+        <div class="pro-tip">
+            <p>
+                <b>Pro Tip:</b> Use Good Behavior 4-in-1 Prep Spray and Spirulina Protein Blowout Cream before blow drying to detangle, hydrate, and enhance shine even more.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- key ingredients  -->
+<section class="key-ingredients">
+    <div class="container-fluid">
+        <div class="all3-standards">
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="standard">
+                    <img class="img-fluid" src="./images/Mask group-cruelty-free.png" alt="">
+                </div>
+                <div class="standard">
+                    <img class="img-fluid" src="./images/Mask group-gluten-free.png" alt="">
+                </div>
+                <div class="standard">
+                    <img class="img-fluid" src="./images/Mask group-vegan.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    <div class="ingredient d-flex">
+        <div class="ingredient-left">
+            <div class="ingredient-left-inner">
+                <a href="">View Full Ingredient List</a>
+                <h2>Key Ingredients</h2>
+                <p>The Secret Behind The Shine</p> 
+            </div>
+        </div>
+        <div class="ingredient-right">
+            <ul class="ingredient-right-list">
+                <li>
+                    <h4>Spirulina Protein</h4>
+                    <p>
+                        Repair and nourish with amino acids, vitamins, minerals, and strengthening biotin for truly healthy hair.
+                    </p>
+                </li>
+                <li>
+                    <h4>Innovative Bonding Polymers</h4>
+                    <p>
+                        Formaldehyde-free bonding polymers mimic the frizz-free, high-shine coating of a keratin treatment for smooth results.healthy hair.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+  
+    </div>
+</section>
+
+<!-- stock up and save  -->
+<section class="stock-up">
+    <div class="container">
+        <h2 class="stock-up-and-save-heading">Stock Up & Save</h2>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-4 stocks">
+                <div class="stock-head d-flex justify-content-between">
+                    <div class="offer-div">
+                        <p class="pack">4-pack</p>
+                        <p class="off">30% off</p>
+                    </div>
+                    <div class="price-div">
+                        <p class="price">$128</p>
+                        <p class="you-save">You Save <span>$22.40</span></p>
+                        <p class="per-unit">per unit</p>
+                    </div>
+                </div>
+                <div class="stock-up-img-container">
+                    <img class="img-fluid" src="./images/Rectangle 41-stock-up-img-1.png" alt="">
+                </div>
+                <button class="stock-up-button">Buy Now</button>
+            </div>
+            <div class="col-lg-4 stocks">
+                <div class="stock-head d-flex justify-content-between">
+                    <div class="offer-div">
+                        <p class="pack">3-pack</p>
+                        <p class="off">20% off</p>
+                    </div>
+                    <div class="price-div">
+                        <p class="price">$96</p>
+                        <p class="you-save">You Save <span>$29.60</span></p>
+                        <p class="per-unit">per unit</p>
+                    </div>
+                </div>
+                <div class="stock-up-img-container">
+                    <img class="img-fluid" src="./images/Rectangle 41-stock-up-img-2.png" alt="">
+                </div>
+                <button class="stock-up-button">Buy Now</button>
+            </div>
+            <div class="col-lg-4 stocks">
+                <div class="stock-head d-flex justify-content-between">
+                    <div class="offer-div">
+                        <p class="pack">2-pack</p>
+                        <p class="off">10% off</p>
+                    </div>
+                    <div class="price-div">
+                        <p class="price">$64</p>
+                        <p class="you-save">You Save <span>$28.80</span></p>
+                        <p class="per-unit">per unit</p>
+                    </div>
+                </div>
+                <div class="stock-up-img-container">
+                    <img class="img-fluid" src="./images/Rectangle 41-stock-up-img-3.png" alt="">
+                </div>
+                <button class="stock-up-button">Buy Now</button>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- read more  -->
+<section class="read-more">
+    <div class="read-more-heading">
+        <h2>Read More Reviews</h2>
+        <p>See What Others Have To Say</p>                
+    </div>
+    <div class="container">
+        <div class="read-more-comments">
+            <div class="star-container">
+                <img class="img-fluid" src="./images/5-star-five-star-img.png" alt="">
+            </div>
+            <h3 class="comment-headline">GOOD BEHAVIOR LINE IS AWESOME!</h3>
+            <div class="comment">
+                <p>I have no complaints about any of the Good Behavior products.</p>
+                <p>- Smells amazing</p>
+                <p>- Does what it says it does</p>
+                <p>- Hair feels healthy: smooth, soft and definitely removes frizziness</p>
+               <p>I always use it before applying any heat to my hair. My hairstylist utilizes this product as well. Professional approved
+            </p>
+            </div>
+            <p class="author">Cynthia H.</p>
+        </div>
+        <div class="read-more-comments">
+            <div class="star-container">
+                <img class="img-fluid" src="./images/5-star-five-star-img.png" alt="">
+            </div>
+            <h3 class="comment-headline">TOTALLY IN LOVE!!</h3>
+            <div class="comment">                
+               <p>
+                Absolutely love it! Finally something that works for frizz on my hair!!! I've tried tons of products but thank goodness I didn't give up. Now I'm done looking!!
+            </p>
+            </div>
+            <p class="author">Ann D.</p>
+        </div>
+        <div class="read-more-comments">
+            <div class="star-container">
+                <img class="img-fluid" src="./images/5-star-five-star-img.png" alt="">
+            </div>
+            <h3 class="comment-headline">GREAT PRODUCT FOR HEAT PROTECTION AND FRIZZY HAIR!</h3>
+            <div class="comment">
+                <p>
+                    I have wavy and super frizzy hair. This product smooths my hair without feeling heavy or sticky. Bonus, I love the scent!
+                </p>
+            </div>
+            <p class="author">Tara L.</p>
+        </div>
+    </div>
+</section>
+
+<!-- pagination  -->
+
+<section class="pagination">
+    <div class="container-fluid">
+        <div class="pagination-container">
+            <div class="page"><p>Page</p></div>       
+            <div class="pagination-div">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+            </div>    
+        </div>
+    </div>
+</section>
+
+<!-- follow-on-instagram  -->
+<section class="follow-on-ig">
+<div class="container-fluid">
+    <h2 class="follow-on-heading">Follow us on Instagram: <span>@igkhair</span></h2>
+    <ul class="ig-image-list">
+    <li>
+        <div class="ig-images">
+            <img class="img-fluid" src="./images/Union-instagram-img1.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="ig-images">
+            <img class="img-fluid" src="./imageS/Union-instagram-img2.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="ig-images">
+            <img class="img-fluid" src="./images/Union-instagram-img3.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="ig-images">
+            <img class="img-fluid" src="./images/Union-instagram-img4.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="ig-images">
+            <img class="img-fluid" src="./images/Union-instagram-img5.png" alt="">
+        </div>
+    </li>
+   </ul>
+   <ul class="ig-image-list">
+    <li>
+        <div class="ig-images">
+            <img class="img-fluid" src="./images/175-2 1-instagram-img7.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="ig-images">
+            <img class="img-fluid" src="./images/175-3 1-instagram-img7.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="ig-images">
+            <img class="img-fluid" src="./images/175 1-instagram-img8.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="ig-images">
+            <img class="img-fluid" src="./images/175_4 1-instagram-img9.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="ig-images">
+            <img class="img-fluid" src="./imageS/175-5 1-instagram-img10.png" alt="">
+        </div>
+    </li>
+   </ul>
+</div>
+</section>    
+
+<!-- footer  -->
+<footer>
+    <div class="container-fluid">
+        <div class="footer-top">
+            <div class="logo-img">
+                <img class="img-fluid" src="./images/IGK-Logo-logo-black.png" alt="">
+            </div>
+            <ul class="footer-list">
+                <li>
+                    <a href="">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="">Terms & Conditions</a>
+                </li>
+                <li>
+                    <a href="">Refund Policy</a>
+                </li>
+                <li>
+                    <a href="">Accessiblity</a>
+                </li>
+                <li>
+                    <a href="">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="brand-partners">
+                <span class="luxury-img">
+                    <img class="img-fluid" src="./images/lbp-logo-brand-partner-logo.png" alt="">
+                </span>
+                <span class="brand-text">LUXURY BRAND PARTNERS</span>
+            </div>
+            <div class="copyright-text">
+                <span>Copyright © 2022. All Rights Reserved.</span>
+                <span>  |  </span>
+                <span>A Luxury Brand Partners (LBP) Company</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="./js/index.js"></script>
+</body>
+</html>
