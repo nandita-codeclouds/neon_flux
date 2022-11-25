@@ -1546,4 +1546,15 @@ footer{
     }
   }
 
+  @media only screen and (max-width: 375.91px){
+    .style-guide .pro-tip > p{
+        padding: 19px 15px;
+    }
+    .key-ingredients .ingredient .ingredient-right .ingredient-right-list{
+        padding-left: 0;
+    }
+    footer .footer-top .footer-list{
+        margin-top: 25px;
+    }
+  }
 
