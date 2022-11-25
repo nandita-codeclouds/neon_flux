@@ -16,9 +16,9 @@
 <body>
     <div id="hr-top"></div>
     <!-- navbar  -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img class="img-fluid" src="./images/logo-icon.png" alt="">
             </a>
             <ul class="navbar-right d-flex">
@@ -36,12 +36,10 @@
 
     <!-- product details banner -->
 
-    <!-- to create dropdowns, use ul li and input type button or radio  -->
-
     <section class="product-details">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 tab-product-gallery">
+            <div class="row product-detail-row">
+                <div class="col-lg-6 col-md-12 tab-product-gallery">
                     <div class="image-tab-column">
                         <div class="img-tab-cell">
                             <img class="img-fluid" src="./images/Rectangle 30-spray-img-1.png" alt="" onclick="openTabImg(this)">
@@ -67,7 +65,7 @@
                         <div id="imgtext"></div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-12">
                     <div class="product-detail-desc">
                         <h1 class="product-detail-heading">Good Behavior Spirulina Protein Smoothing Spray</h1>
                         <p class="product-detail-price">$32</p>
@@ -93,9 +91,9 @@
     
                             <div class="options show " id="subscribe_and_save_options">      
                                 <div class="button-container">
-                                    <input class="offer-input-button active " type="button" value="30 days" onclick="msg()">
-                                    <input class="offer-input-button" type="button" value="60 days" onclick="msg()">
-                                    <input class="offer-input-button " type="button" value="90 days" onclick="msg()">
+                                    <input class="offer-input-button active " type="button" value="30 days" onclick="selectInput(this)">
+                                    <input class="offer-input-button" type="button" value="60 days" onclick="selectInput(this)">
+                                    <input class="offer-input-button " type="button" value="90 days" onclick="selectInput(this)">
                                 </div>                          
                             </div>
                             
@@ -116,46 +114,46 @@
     
                             <div class="options-container hide" id="one_time_options">
                                 <div class="d-flex options">
-                                    <input class="offer-input-button active" type="button" value="4 pack" onclick="msg()">
+                                    <input class="offer-input-button offer-button active" type="button" value="4 pack" onclick="selectInput(this)">
                                     <div class="one-time-prices d-flex align-items-center justify-content-between" >
                                         <div class="offer">30% off</div>
                                         <div class="">
-                                            <p class="one-time-cancelled-price">$128</p>
-                                            <p class="one-time-actual-price">$128</p>
+                                            <p class="one-time-cancelled-price">$128.00</p>
+                                            <p class="one-time-actual-price">$22.40</p>
                                             <p class="per-unit">Per unit</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-flex options">
-                                    <input class="offer-input-button" type="button" value="3 pack" onclick="msg()">
+                                    <input class="offer-input-button offer-button" type="button" value="3 pack" onclick="selectInput(this)">
                                     <div class="one-time-prices d-flex align-items-center justify-content-between">
-                                        <div class="offer">30% off</div>
+                                        <div class="offer">20% off</div>
                                         <div class="">
-                                            <p class="one-time-cancelled-price">$128</p>
-                                            <p class="one-time-actual-price">$128</p>
+                                            <p class="one-time-cancelled-price">$96.00</p>
+                                            <p class="one-time-actual-price">$25.60</p>
                                             <p class="per-unit">Per unit</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-flex options">
-                                    <input class="offer-input-button" type="button" value="2 pack" onclick="msg()">
+                                    <input class="offer-input-button offer-button" type="button" value="2 pack" onclick="selectInput(this)">
                                     <div class="one-time-prices d-flex align-items-center justify-content-between">
-                                        <div class="offer">30% off</div>
+                                        <div class="offer">10% off</div>
                                         <div class="">
-                                            <p class="one-time-cancelled-price">$128</p>
-                                            <p class="one-time-actual-price">$128</p>
+                                            <p class="one-time-cancelled-price">$64.00</p>
+                                            <p class="one-time-actual-price">$28.80</p>
                                             <p class="per-unit">Per unit</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-flex options">
-                                    <input class="offer-input-button" type="button" value="1 pack" onclick="msg()">
+                                    <input class="offer-input-button offer-button" type="button" value="1 pack" onclick="selectInput(this)">
                                     <div class="one-time-prices d-flex align-items-center justify-content-between">
-                                        <div class="offer">30% off</div>
+                                        <div class="offer"></div>
                                         <div class="">
-                                            <p class="one-time-cancelled-price">$128</p>
-                                            <p class="one-time-actual-price">$128</p>
-                                            <p class="per-unit">Per unit</p>
+                                            <!-- <p class="one-time-cancelled-price">$128</p> -->
+                                            <p class="one-time-actual-price">$32.00</p>
+                                            <!-- <p class="per-unit">Per unit</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -163,7 +161,7 @@
                             
                         </li>
                     </ul>
-                    
+                    <div class="buy-now-button">Buy Now</div>
                 </div>               
             </div>
         </div>
@@ -180,14 +178,14 @@
     <section class="total-package">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 total-package-banner">
+                <div class="col-lg-3 col-md-12 total-package-banner">
                     <div class="total-package-text">
                         <h2>Get The Total Package</h2>
                         <p>Good Behavior</p>
                     </div>
                 </div>
 
-                <div class="col-lg-3 total-package-items">
+                <div class="col-lg-3 col-md-4 col-sm-4 total-package-items">
                     <div class="package-img-container">
                         <img class="img-fluid" src="./images/Spray_prep 1-total-package-item-1.png" alt="">
                     </div>
@@ -199,7 +197,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 total-package-items">
+                <div class="col-lg-3 col-md-4 col-sm-4 total-package-items">
                     <div class="package-img-container">
                         <img class="img-fluid" src="./images/Cream_Spray 1-total-package-item-2.png" alt="">
                     </div>
@@ -214,7 +212,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 total-package-items">
+                <div class="col-lg-3 col-md-4 col-sm-4 total-package-items">
                     <div class="package-img-container">
                         <img class="img-fluid" src="./images/Trio 1-total-package-item-3.png" alt="">
                     </div>
@@ -248,12 +246,12 @@
 <section class="great-idea">
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="idea-img">
                 <img class="img-fluid" src="./images/B&A_Smooth 1_1 1-great-idea-img-1.png" alt="">
             </div>
         </div>
-        <div class="col-lg-4 idea-text">
+        <div class="col-lg-4 col-md-4 col-sm-4 idea-text">
             <div class="idea-text-heading">
                 <div class="star-container">
                     <img class="img-fluid" src="./images/5-star-five-star-img.png" alt="">
@@ -265,7 +263,7 @@
                 I love Good Behavior. It truly gives me stright, silky, smooth hair despite the stubborn waviness underneath. The travel size is perfect for trips! - Libby C.
             </p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="idea-img">
                 <img class="img-fluid" src="./images/B&A_Smooth 2_2 1-great-idea-img-2.png" alt="">
             </div>
@@ -277,13 +275,18 @@
 <!-- good behavior  -->
 <section class="good-behavior">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
+        <div class="row good-behavior-row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <h2 class="behavior-big-heading">Good Behavior</h2>
                 <h3 class="behavior-subheading">Spirulina Protein Smoothing Spray</h3>
+                <div class="behavior-img-container">
+                    <!-- <img class="img-fluid" src="./images/hand-good-behavior-spray-bottle.png" alt=""> -->
+                    <img class="img-fluid" src="./images/Group 30-good-behavior-bg-image.png" alt="">
+                </div>
                 <p class="behavior-paragraph">
                     Get salon-worthy, ultra-smooth hair in half the time with this frizz-fighting formula. Each spray shields hair from humidity, heat, and UV damage. 
                 </p>
+               
             </div>
         </div>
     </div>
@@ -301,7 +304,7 @@
         <h2 class="style-guide-heading">Your Ultimate Style Guide</h2>
         <p class="style-guide-paragraph">How to Use Good Behavior</p>
         <div class="row">
-            <div class="col-lg-3 style-steps">
+            <div class="col-lg-3 col-md-6 col-sm-6 style-steps">
                 <div class="guide-step-number">
                     <p class="step">Step</p>
                     <span class="green-line"></span>
@@ -311,7 +314,7 @@
                     Mist Good Behavior Spirulina Protein Smoothing Spray over damp or dry hair in sections and comb through.
                 </p>
             </div>
-            <div class="col-lg-3 style-steps">
+            <div class="col-lg-3 col-md-6 col-sm-6 style-steps">
                 <div class="guide-step-number">
                     <p class="step">Step</p>
                     <span class="green-line"></span>
@@ -321,7 +324,7 @@
                     Blow-dry hair in sections to seal in the treatment with heat.
                 </p>
             </div>
-            <div class="col-lg-3 style-steps">
+            <div class="col-lg-3 col-md-6 col-sm-6 style-steps">
                 <div class="guide-step-number">
                     <p class="step">Step</p>
                     <span class="green-line"></span>
@@ -331,7 +334,7 @@
                     Style as usual or apply again and finish with a flat iron for maximum smoothing and shine.
                 </p>
             </div>
-            <div class="col-lg-3 style-steps">
+            <div class="col-lg-3 col-md-6 col-sm-6 style-steps">
                 <div class="guide-step-number">
                     <p class="step">Step</p>
                     <span class="green-line"></span>
@@ -402,7 +405,7 @@
     <div class="container">
         <h2 class="stock-up-and-save-heading">Stock Up & Save</h2>
         <div class="row align-items-center justify-content-center">
-            <div class="col-lg-4 stocks">
+            <div class="col-lg-4 col-md-4 col-sm-12 stocks">
                 <div class="stock-head d-flex justify-content-between">
                     <div class="offer-div">
                         <p class="pack">4-pack</p>
@@ -419,7 +422,7 @@
                 </div>
                 <button class="stock-up-button">Buy Now</button>
             </div>
-            <div class="col-lg-4 stocks">
+            <div class="col-lg-4 col-md-4 col-sm-12 stocks">
                 <div class="stock-head d-flex justify-content-between">
                     <div class="offer-div">
                         <p class="pack">3-pack</p>
@@ -436,7 +439,7 @@
                 </div>
                 <button class="stock-up-button">Buy Now</button>
             </div>
-            <div class="col-lg-4 stocks">
+            <div class="col-lg-4 col-md-4 col-sm-12 stocks">
                 <div class="stock-head d-flex justify-content-between">
                     <div class="offer-div">
                         <p class="pack">2-pack</p>
@@ -589,7 +592,9 @@
     <div class="container-fluid">
         <div class="footer-top">
             <div class="logo-img">
-                <img class="img-fluid" src="./images/IGK-Logo-logo-black.png" alt="">
+                <a href="#navbar">
+                    <img class="img-fluid" src="./images/IGK-Logo-logo-black.png" alt="">
+                </a>
             </div>
             <ul class="footer-list">
                 <li>
@@ -629,5 +634,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <script src="./js/index.js"></script>
+
 </body>
 </html>
